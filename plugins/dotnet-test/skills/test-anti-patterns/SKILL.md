@@ -1,22 +1,21 @@
 ---
 name: test-anti-patterns
 description: >
-  Detection-focused review of .NET test code for anti-patterns that
-  undermine reliability and diagnostic value. Produces a severity-ranked
-  catalog of findings with concrete code-level fixes.
-  USE FOR: audit test quality, review test code, find test anti-patterns,
-  severity-ranked test audit, tests pass but don't verify anything, flaky
-  tests, ordering dependency, duplicate tests, magic values, missing/no
-  assertions, swallowed exceptions, always-true assertions, self-comparing
-  assertions, broad exception types, over-mocking, test coupling, coverage
-  touching, coverage inflation.
-  DO NOT USE FOR: writing new tests (use writing-mstest-tests), direct
-  MSTest API rewrites or implementation-only fixes such as swapped
-  Assert.AreEqual argument order, running tests (use run-tests), migrating
-  between frameworks (use migration skills), formal test-smell audits,
-  test-smell taxonomy reviews, or prompts that ask to "do a smell audit",
-  "rank smells by severity", or otherwise frame the request around "smell"
-  or "smells" rather than named anti-patterns (use test-smell-detection).
+  Audits existing .NET test code (MSTest, xUnit, NUnit, TUnit) for
+  anti-patterns and quality issues that undermine reliability and diagnostic
+  value — produces a severity-ranked report (Critical / Warning / Info) with
+  concrete code-level fixes and acknowledgement of what the tests do well.
+  INVOKE THIS SKILL when the user asks to audit, review, rank, or find
+  problems in existing tests — including prompts about: "audit my tests",
+  "audit for .NET test anti-patterns", "test smell audit", "rank by
+  severity", "are these tests good", tests that pass but verify nothing,
+  no/missing assertions, swallowed exceptions, always-true / self-comparing
+  / self-referential / tautological assertions, broad exception types,
+  flakiness (Thread.Sleep, DateTime.Now), ordering dependency, shared
+  static state, reflection coupling, duplicated tests, magic values,
+  coverage touching, coverage inflation.
+  DO NOT USE FOR: writing new tests (use writing-mstest-tests); running
+  tests (use run-tests); framework migration (use migration skills).
 license: MIT
 ---
 
